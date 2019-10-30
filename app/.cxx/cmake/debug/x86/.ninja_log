@@ -1,3 +1,5 @@
 # ninja log v5
-0	506	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	355f668b23bfcb03
-508	736	0	/Users/nambuivu/Workspace/cmakeandroid/distribution/lib/x86/libnative-lib.so	a45e19d913d3499a
+0	896	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	355f668b23bfcb03
+897	1240	0	/Users/nambuivu/Workspace/cmakeandroid/distribution/lib/x86/libnative-lib.so	a45e19d913d3499a
+3	1459	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	355f668b23bfcb03
+1459	2413	0	/Users/nambuivu/Workspace/cmakeandroid/distribution/lib/x86/libnative-lib.so	a45e19d913d3499a

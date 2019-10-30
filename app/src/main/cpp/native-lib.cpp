@@ -2,6 +2,7 @@
 #include <string>
 #include <curl.h>
 #include "Apis.h"
+#include <iostream>
 
 extern "C"
 JNIEXPORT jstring JNICALL
@@ -35,16 +36,23 @@ std::string loginApi() {
         curl_easy_setopt(curl, CURLOPT_WRITEDATA, &readBuffer);
 
         res = curl_easy_perform(curl);
+
         /* Check for errors */
         if (res != CURLE_OK) {
             fprintf(stderr, "curl_easy_perform() failed: %s\n",
                     curl_easy_strerror(res));
+        } else {
+            long response_code;
+            curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE, &response_code);
+            std::cout << response_code << std::endl;
         }
+
         /* always cleanup */
         curl_easy_cleanup(curl);
     }
     curl_global_cleanup();
 
+    std::cout << readBuffer << std::endl;
 
     return readBuffer;
 }
