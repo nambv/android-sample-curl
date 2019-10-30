@@ -22,16 +22,27 @@ static size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *use
 std::string loginApi() {
 
     std::string readBuffer;
+    long responseCode = 0;
 
     CURL *curl;
     CURLcode res;
+
+    char* jsonBody = const_cast<char *>(R"({ "name" : "Pedro" , "age" : "22" })");
+
+    struct curl_slist *headers = NULL;
+    headers = curl_slist_append(headers, "Accept: application/json");
+    headers = curl_slist_append(headers, "Content-Type: application/json");
+    headers = curl_slist_append(headers, "charsets: utf-8");
 
     curl_global_init(CURL_GLOBAL_ALL);
 
     curl = curl_easy_init();
 
     if (curl) {
-        curl_easy_setopt(curl, CURLOPT_URL, "http://restcountries.eu/rest/v2/all");
+        curl_easy_setopt(curl, CURLOPT_URL, "https://randomuser.me/api");
+        curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, false);
+//        curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
+//        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, jsonBody);
         curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
         curl_easy_setopt(curl, CURLOPT_WRITEDATA, &readBuffer);
 
@@ -42,9 +53,7 @@ std::string loginApi() {
             fprintf(stderr, "curl_easy_perform() failed: %s\n",
                     curl_easy_strerror(res));
         } else {
-            long response_code;
-            curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE, &response_code);
-            std::cout << response_code << std::endl;
+            curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE, &responseCode);
         }
 
         /* always cleanup */
@@ -53,6 +62,7 @@ std::string loginApi() {
     curl_global_cleanup();
 
     std::cout << readBuffer << std::endl;
+    std::cout << responseCode << std::endl;
 
-    return readBuffer;
+    return responseCode + "\n" + readBuffer;
 }
