@@ -1,0 +1,3 @@
+/Users/nambuivu/Workspace/cmakeandroid/app/.cxx/cmake/debug/x86/CMakeFiles/edit_cache.dir
+/Users/nambuivu/Workspace/cmakeandroid/app/.cxx/cmake/debug/x86/CMakeFiles/rebuild_cache.dir
+/Users/nambuivu/Workspace/cmakeandroid/app/.cxx/cmake/debug/x86/CMakeFiles/native-lib.dir

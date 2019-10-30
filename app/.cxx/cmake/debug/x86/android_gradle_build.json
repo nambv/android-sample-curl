@@ -1,0 +1,62 @@
+
+{
+	"buildFiles" : [ "/Users/nambuivu/Workspace/cmakeandroid/app/CMakeLists.txt" ],
+	"cleanCommands" : 
+	[
+		"/Users/nambuivu/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/nambuivu/Workspace/cmakeandroid/app/.cxx/cmake/debug/x86 --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"crypto-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "crypto",
+			"buildType" : "debug",
+			"output" : "/Users/nambuivu/Workspace/cmakeandroid/app/../distribution/lib/x86/libcrypto.a",
+			"toolchain" : "9097989532907490180"
+		},
+		"curl-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "curl",
+			"buildType" : "debug",
+			"output" : "/Users/nambuivu/Workspace/cmakeandroid/app/../distribution/lib/x86/libcurl.a",
+			"toolchain" : "9097989532907490180"
+		},
+		"native-lib-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "native-lib",
+			"buildCommand" : "/Users/nambuivu/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/nambuivu/Workspace/cmakeandroid/app/.cxx/cmake/debug/x86 --target native-lib",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=i686-none-linux-android21 --gcc-toolchain=/Users/nambuivu/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nambuivu/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../curl -I../../../../../distribution/include/curl/x86  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security   -std=gnu++11 -lz -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "/Users/nambuivu/Workspace/cmakeandroid/app/src/main/cpp/native-lib.cpp",
+					"workingDirectory" : "/Users/nambuivu/Workspace/cmakeandroid/app/.cxx/cmake/debug/x86"
+				}
+			],
+			"output" : "/Users/nambuivu/Workspace/cmakeandroid/distribution/lib/x86/libnative-lib.so",
+			"toolchain" : "9097989532907490180"
+		},
+		"ssl-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "ssl",
+			"buildType" : "debug",
+			"output" : "/Users/nambuivu/Workspace/cmakeandroid/app/../distribution/lib/x86/libssl.a",
+			"toolchain" : "9097989532907490180"
+		}
+	},
+	"toolchains" : 
+	{
+		"9097989532907490180" : 
+		{
+			"cCompilerExecutable" : "/Users/nambuivu/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/Users/nambuivu/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+		}
+	}
+}

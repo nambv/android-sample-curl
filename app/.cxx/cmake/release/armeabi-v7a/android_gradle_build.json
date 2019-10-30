@@ -1,0 +1,62 @@
+
+{
+	"buildFiles" : [ "/Users/nambuivu/Workspace/cmakeandroid/app/CMakeLists.txt" ],
+	"cleanCommands" : 
+	[
+		"/Users/nambuivu/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/nambuivu/Workspace/cmakeandroid/app/.cxx/cmake/release/armeabi-v7a --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"crypto-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "crypto",
+			"buildType" : "release",
+			"output" : "/Users/nambuivu/Workspace/cmakeandroid/app/../distribution/lib/armeabi-v7a/libcrypto.a",
+			"toolchain" : "9097989532907490180"
+		},
+		"curl-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "curl",
+			"buildType" : "release",
+			"output" : "/Users/nambuivu/Workspace/cmakeandroid/app/../distribution/lib/armeabi-v7a/libcurl.a",
+			"toolchain" : "9097989532907490180"
+		},
+		"native-lib-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "native-lib",
+			"buildCommand" : "/Users/nambuivu/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/nambuivu/Workspace/cmakeandroid/app/.cxx/cmake/release/armeabi-v7a --target native-lib",
+			"buildType" : "release",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi21 --gcc-toolchain=/Users/nambuivu/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nambuivu/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../curl -I../../../../../distribution/include/curl/armeabi-v7a  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security   -std=gnu++11 -lz -Oz -DNDEBUG  -fPIC    -c ",
+					"src" : "/Users/nambuivu/Workspace/cmakeandroid/app/src/main/cpp/native-lib.cpp",
+					"workingDirectory" : "/Users/nambuivu/Workspace/cmakeandroid/app/.cxx/cmake/release/armeabi-v7a"
+				}
+			],
+			"output" : "/Users/nambuivu/Workspace/cmakeandroid/distribution/lib/armeabi-v7a/libnative-lib.so",
+			"toolchain" : "9097989532907490180"
+		},
+		"ssl-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "ssl",
+			"buildType" : "release",
+			"output" : "/Users/nambuivu/Workspace/cmakeandroid/app/../distribution/lib/armeabi-v7a/libssl.a",
+			"toolchain" : "9097989532907490180"
+		}
+	},
+	"toolchains" : 
+	{
+		"9097989532907490180" : 
+		{
+			"cCompilerExecutable" : "/Users/nambuivu/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/Users/nambuivu/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+		}
+	}
+}

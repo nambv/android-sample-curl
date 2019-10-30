@@ -1,0 +1,72 @@
+{
+  "variant": {
+    "module": {
+      "rootBuildGradleFolder": "/Users/nambuivu/Workspace/cmakeandroid",
+      "sdkFolder": "/Users/nambuivu/Library/Android/sdk",
+      "isNativeCompilerSettingsCacheEnabled": false,
+      "isBuildOnlyTargetAbiEnabled": true,
+      "splitsAbiFilterSet": [],
+      "intermediatesFolder": "/Users/nambuivu/Workspace/cmakeandroid/app/build/intermediates",
+      "gradleModulePathName": ":app",
+      "moduleRootFolder": "/Users/nambuivu/Workspace/cmakeandroid/app",
+      "makeFile": "/Users/nambuivu/Workspace/cmakeandroid/app/CMakeLists.txt",
+      "buildSystem": "CMAKE",
+      "compilerSettingsCacheFolder": "/Users/nambuivu/Workspace/cmakeandroid/.cxx",
+      "cxxFolder": "/Users/nambuivu/Workspace/cmakeandroid/app/.cxx",
+      "ndkFolder": "/Users/nambuivu/Library/Android/sdk/ndk-bundle",
+      "ndkVersion": "20.0.5594570",
+      "ndkSupportedAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "ndkDefaultAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "cmakeToolchainFile": "."
+    },
+    "buildSystemArgumentList": [
+      "-DANDROID_PLATFORM\u003dandroid-21",
+      "-DANDROID_TOOLCHAIN\u003dclang",
+      "-DANDROID_STL\u003dc++_static"
+    ],
+    "cFlagList": [],
+    "cppFlagsList": [],
+    "variantName": "release",
+    "soFolder": "/Users/nambuivu/Workspace/cmakeandroid/app/build/intermediates/cmake/release/lib",
+    "objFolder": "/Users/nambuivu/Workspace/cmakeandroid/app/build/intermediates/cmake/release/obj",
+    "jsonFolder": "/Users/nambuivu/Workspace/cmakeandroid/app/.cxx/cmake/release",
+    "gradleBuildOutputFolder": "/Users/nambuivu/Workspace/cmakeandroid/app/.cxx/cxx/release",
+    "isDebuggableEnabled": false,
+    "validAbiList": [
+      "ARMEABI_V7A",
+      "X86"
+    ],
+    "buildTargetSet": []
+  },
+  "abi": "ARMEABI_V7A",
+  "abiPlatformVersion": 16,
+  "cxxBuildFolder": "/Users/nambuivu/Workspace/cmakeandroid/app/.cxx/cmake/release/armeabi-v7a",
+  "jsonFile": "/Users/nambuivu/Workspace/cmakeandroid/app/.cxx/cmake/release/armeabi-v7a/android_gradle_build.json",
+  "gradleBuildOutputFolder": "/Users/nambuivu/Workspace/cmakeandroid/app/.cxx/cxx/release/armeabi-v7a",
+  "objFolder": "/Users/nambuivu/Workspace/cmakeandroid/app/build/intermediates/cmake/release/obj/armeabi-v7a",
+  "buildCommandFile": "/Users/nambuivu/Workspace/cmakeandroid/app/.cxx/cmake/release/armeabi-v7a/build_command.txt",
+  "buildOutputFile": "/Users/nambuivu/Workspace/cmakeandroid/app/.cxx/cmake/release/armeabi-v7a/build_output.txt",
+  "modelOutputFile": "/Users/nambuivu/Workspace/cmakeandroid/app/.cxx/cmake/release/armeabi-v7a/build_model.json",
+  "cmake": {
+    "cmakeListsWrapperFile": "/Users/nambuivu/Workspace/cmakeandroid/app/.cxx/cxx/release/armeabi-v7a/CMakeLists.txt",
+    "toolchainWrapperFile": "/Users/nambuivu/Workspace/cmakeandroid/app/.cxx/cxx/release/armeabi-v7a/android_gradle_build.toolchain.cmake",
+    "buildGenerationStateFile": "/Users/nambuivu/Workspace/cmakeandroid/app/.cxx/cxx/release/armeabi-v7a/build_generation_state.json",
+    "cacheKeyFile": "/Users/nambuivu/Workspace/cmakeandroid/app/.cxx/cxx/release/armeabi-v7a/compiler_cache_key.json",
+    "compilerCacheUseFile": "/Users/nambuivu/Workspace/cmakeandroid/app/.cxx/cxx/release/armeabi-v7a/compiler_cache_use.json",
+    "compilerCacheWriteFile": "/Users/nambuivu/Workspace/cmakeandroid/app/.cxx/cxx/release/armeabi-v7a/compiler_cache_write.json",
+    "toolchainSettingsFromCacheFile": "/Users/nambuivu/Workspace/cmakeandroid/app/.cxx/cxx/release/armeabi-v7a/compiler_settings_cache.cmake",
+    "cmakeWrappingBaseFolder": "."
+  },
+  "jsonGenerationLoggingRecordFile": "/Users/nambuivu/Workspace/cmakeandroid/app/.cxx/cmake/release/armeabi-v7a/json_generation_record.json",
+  "compileCommandsJsonFile": "/Users/nambuivu/Workspace/cmakeandroid/app/.cxx/cmake/release/armeabi-v7a/compile_commands.json"
+}
