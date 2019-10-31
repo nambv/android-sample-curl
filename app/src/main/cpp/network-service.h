@@ -7,28 +7,18 @@
 
 #include <stdio.h>
 #include <string>
+#include <map>
+#include <curl.h>
 
 class NetworkService {
-private:
-    const char *accessToken;
-    const char *deviceId;
-    const char *deviceType;
-    const char *locale;
-    const char *appVersion;
 
-protected:
+public:
 
-    NetworkService(const char *accessToken,
-                   const char *deviceId,
-                   const char *deviceType,
-                   const char *locale,
-                   const char *appVersion);
+    int registerKey(std::map<char *, char *> headers);
 
-    std::string registerKey();
+    int renewKey(std::map<char *, char *> headers, const std::map<char *, char *> data);
 
-    std::string renewKey();
-
-    std::string trackingOnline();
+    int trackingOnline(std::map<char *, char *> headers, std::map<char *, char *> data);
 };
 
 std::string loginApi(const char *email, const char *password);
