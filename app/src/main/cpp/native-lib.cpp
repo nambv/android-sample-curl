@@ -4,6 +4,7 @@
 #include "network-service.h"
 #include <iostream>
 #include <map>
+#include <nlohmann/json.hpp>
 
 extern "C"
 JNIEXPORT jstring JNICALL
@@ -29,17 +30,15 @@ std::string loginApi(const char *email, const char *password) {
     std::string readBuffer;
     int responseCode = 0;
 
-    char bodyContent[1000];
-    strcpy(bodyContent, R"({ "email" : ")");
-    strcat(bodyContent, email);
-    strcat(bodyContent, R"(", "password" : "})");
-    strcat(bodyContent, password);
-    strcat(bodyContent, R"("})");
+    nlohmann::json body;
+    body["email"] = "eve.holt@reqres.in";
+    body["password"] = "cityslicka";
+    std::string text = body.dump();
 
     CURL *curl;
     CURLcode res;
 
-    char *jsonBody = const_cast<char *>(R"({ "email" : "eve.holt@reqres.in" , "password" : "cityslicka" })");
+//    char *jsonBody = const_cast<char *>(R"({ "email" : "eve.holt@reqres.in" , "password" : "cityslicka" })");
 
     struct curl_slist *headers = NULL;
     headers = curl_slist_append(headers, "Content-Type: application/json");
@@ -52,7 +51,7 @@ std::string loginApi(const char *email, const char *password) {
         curl_easy_setopt(curl, CURLOPT_URL, "https://reqres.in/api/login");
         curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, false);
         curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
-        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, bodyContent);
+        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, text.c_str());
         curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
         curl_easy_setopt(curl, CURLOPT_WRITEDATA, &readBuffer);
 
@@ -126,7 +125,7 @@ int curlRequest(const std::string &path,
     curl = curl_easy_init();
 
     if (curl) {
-        curl_easy_setopt(curl, CURLOPT_URL, "http://q7dmz.mocklab.io/" + path);
+        curl_easy_setopt(curl, CURLOPT_URL, "http://q7dmz.mocklab.io/");
         curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, false);
         curl_easy_setopt(curl, CURLOPT_HTTPHEADER, requestHeaders);
 

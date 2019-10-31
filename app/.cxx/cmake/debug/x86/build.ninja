@@ -55,7 +55,7 @@ build CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o: CXX_COMPILER__nat
   DEFINES = -Dnative_lib_EXPORTS
   DEP_FILE = CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security   -std=gnu++11 -lz -O0 -fno-limit-debug-info  -fPIC
-  INCLUDES = -I../../../../curl -I../../../../../distribution/include/curl/x86
+  INCLUDES = -I../../../../curl -I../../../../../distribution/include/curl/x86 -I/usr/local/include -I/usr/local/Cellar/nlohmann_json/3.7.0/include -I/home/linuxbrew/.linuxbrew/Cellar/nlohmann_json/3.7.0/include
   IN_ABS = /Users/nambuivu/Workspace/cmakeandroid/app/src/main/cpp/native-lib.cpp
   OBJECT_DIR = CMakeFiles/native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles/native-lib.dir/src/main/cpp

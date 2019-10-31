@@ -34,7 +34,7 @@
 			[
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi21 --gcc-toolchain=/Users/nambuivu/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nambuivu/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../curl -I../../../../../distribution/include/curl/armeabi-v7a  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security   -std=gnu++11 -lz -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"flags" : "  --target=armv7-none-linux-androideabi21 --gcc-toolchain=/Users/nambuivu/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nambuivu/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../curl -I../../../../../distribution/include/curl/armeabi-v7a -I/usr/local/include -I/usr/local/Cellar/nlohmann_json/3.7.0/include -I/home/linuxbrew/.linuxbrew/Cellar/nlohmann_json/3.7.0/include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security   -std=gnu++11 -lz -O0 -fno-limit-debug-info  -fPIC    -c ",
 					"src" : "/Users/nambuivu/Workspace/cmakeandroid/app/src/main/cpp/native-lib.cpp",
 					"workingDirectory" : "/Users/nambuivu/Workspace/cmakeandroid/app/.cxx/cmake/debug/armeabi-v7a"
 				}

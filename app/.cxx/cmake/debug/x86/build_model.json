@@ -5,6 +5,7 @@
       "sdkFolder": "/Users/nambuivu/Library/Android/sdk",
       "isNativeCompilerSettingsCacheEnabled": false,
       "isBuildOnlyTargetAbiEnabled": true,
+      "ideBuildTargetAbi": "x86",
       "splitsAbiFilterSet": [],
       "intermediatesFolder": "/Users/nambuivu/Workspace/cmakeandroid/app/build/intermediates",
       "gradleModulePathName": ":app",
@@ -43,7 +44,6 @@
     "gradleBuildOutputFolder": "/Users/nambuivu/Workspace/cmakeandroid/app/.cxx/cxx/debug",
     "isDebuggableEnabled": true,
     "validAbiList": [
-      "ARMEABI_V7A",
       "X86"
     ],
     "buildTargetSet": []

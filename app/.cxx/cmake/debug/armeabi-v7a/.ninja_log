@@ -1,3 +1,11 @@
 # ninja log v5
 0	696	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	9eff61bebca0a61d
 696	973	0	/Users/nambuivu/Workspace/cmakeandroid/distribution/lib/armeabi-v7a/libnative-lib.so	e78f3847a29e1121
+1	921	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	9eff61bebca0a61d
+922	1319	0	/Users/nambuivu/Workspace/cmakeandroid/distribution/lib/armeabi-v7a/libnative-lib.so	e78f3847a29e1121
+2	2947	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	50befd80a6687358
+2947	3332	0	/Users/nambuivu/Workspace/cmakeandroid/distribution/lib/armeabi-v7a/libnative-lib.so	e78f3847a29e1121
+2	3452	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	50befd80a6687358
+3452	3837	0	/Users/nambuivu/Workspace/cmakeandroid/distribution/lib/armeabi-v7a/libnative-lib.so	e78f3847a29e1121
+1	2955	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	50befd80a6687358
+2956	3326	0	/Users/nambuivu/Workspace/cmakeandroid/distribution/lib/armeabi-v7a/libnative-lib.so	e78f3847a29e1121

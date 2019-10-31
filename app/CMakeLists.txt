@@ -37,3 +37,6 @@ target_link_libraries(native-lib
                       ssl
                       crypto
                       log)
+
+
+target_include_directories(native-lib PUBLIC /usr/local/include /usr/local/Cellar/nlohmann_json/3.7.0/include /home/linuxbrew/.linuxbrew/Cellar/nlohmann_json/3.7.0/include)
