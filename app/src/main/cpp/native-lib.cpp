@@ -81,7 +81,9 @@ std::string loginApi(const char *email, const char *password) {
            + readBuffer;
 }
 
-int submitCUrlRequest(std::map<char *, char *> headers, std::map<char *, char *> content) {
+int curlRequest(const std::string &path,
+                std::map<char *, char *> headers,
+                std::map<char *, char *> content) {
 
     CURL *curl;
     CURLcode res;
@@ -124,7 +126,7 @@ int submitCUrlRequest(std::map<char *, char *> headers, std::map<char *, char *>
     curl = curl_easy_init();
 
     if (curl) {
-        curl_easy_setopt(curl, CURLOPT_URL, "http://q7dmz.mocklab.io/renew_key");
+        curl_easy_setopt(curl, CURLOPT_URL, "http://q7dmz.mocklab.io/" + path);
         curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, false);
         curl_easy_setopt(curl, CURLOPT_HTTPHEADER, requestHeaders);
 
@@ -154,14 +156,14 @@ int submitCUrlRequest(std::map<char *, char *> headers, std::map<char *, char *>
 
 int NetworkService::registerKey(std::map<char *, char *> headers) {
     std::map<char *, char *> content;
-    return submitCUrlRequest(headers, content);
+    return curlRequest("/register_key", headers, content);
 }
 
 int NetworkService::renewKey(std::map<char *, char *> headers, std::map<char *, char *> content) {
-    return submitCUrlRequest(headers, content);
+    return curlRequest("renew_key", headers, content);
 }
 
 int NetworkService::trackingOnline(std::map<char *, char *> headers,
-                                           std::map<char *, char *> content) {
-    return submitCUrlRequest(headers, content);
+                                   std::map<char *, char *> content) {
+    return curlRequest("/users/track", headers, content);
 }
