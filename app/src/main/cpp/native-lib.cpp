@@ -1,7 +1,7 @@
 #include <jni.h>
 #include <string>
 #include <curl.h>
-#include "Apis.h"
+#include "network-service.h"
 #include <iostream>
 
 extern "C"
