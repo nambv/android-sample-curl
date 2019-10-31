@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         btnTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String result = stringFromJNI();
+                String result = stringFromJNI("eve.holt@reqres.in", "cityslicka");
                 tvResult.setText(result);
             }
         });
@@ -52,5 +52,5 @@ public class MainActivity extends AppCompatActivity {
      * A native method that is implemented by the 'native-lib' native library,
      * which is packaged with this application.
      */
-    public native String stringFromJNI();
+    public native String stringFromJNI(String email, String password);
 }

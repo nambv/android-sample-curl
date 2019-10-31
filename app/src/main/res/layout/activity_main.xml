@@ -11,13 +11,13 @@
         android:id="@+id/btn_test"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Click to excute" />
+        android:text="HTTP POST METHOD"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/tv_result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Hello World!" />
+        android:layout_marginTop="16dp" />
 
 </LinearLayout>

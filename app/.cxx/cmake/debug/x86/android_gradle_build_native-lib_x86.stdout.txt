@@ -1,8 +1,3 @@
 [1/2] Building CXX object CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o
 clang++: warning: -lz: 'linker' input unused [-Wunused-command-line-argument]
-/Users/nambuivu/Workspace/cmakeandroid/app/src/main/cpp/native-lib.cpp:67:25: warning: adding 'long' to a string does not append to the string [-Wstring-plus-int]
-    return responseCode + "\n" + readBuffer;
-           ~~~~~~~~~~~~~^~~~~~
-/Users/nambuivu/Workspace/cmakeandroid/app/src/main/cpp/native-lib.cpp:67:25: note: use array indexing to silence this warning
-1 warning generated.
 [2/2] Linking CXX shared library /Users/nambuivu/Workspace/cmakeandroid/distribution/lib/x86/libnative-lib.so

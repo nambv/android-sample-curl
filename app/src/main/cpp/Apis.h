@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include <string>
 
-std::string loginApi();
+std::string loginApi(const char *string, const char *string1);
 
 
 #endif //ANDROID_APIS_H

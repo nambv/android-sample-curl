@@ -8,8 +8,12 @@ extern "C"
 JNIEXPORT jstring JNICALL
 Java_com_consciousapps_cmakecurltest_MainActivity_stringFromJNI(
         JNIEnv *env,
-        jobject /* this */) {
-    std::string response = loginApi();
+        jobject /* this */, jstring email, jstring password) {
+
+    const char *emailChar = env->GetStringUTFChars(email, nullptr);
+    const char *passwordChar = env->GetStringUTFChars(password, nullptr);
+
+    std::string response = loginApi(emailChar, passwordChar);
     return env->NewStringUTF(response.c_str());
 }
 
@@ -19,30 +23,35 @@ static size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *use
     return size * nmemb;
 }
 
-std::string loginApi() {
+std::string loginApi(const char *email, const char *password) {
 
     std::string readBuffer;
-    long responseCode = 0;
+    int responseCode = 0;
+
+    char bodyContent[1000];
+    strcpy(bodyContent, R"({ "email" : ")");
+    strcat(bodyContent, email);
+    strcat(bodyContent, R"(", "password" : "})");
+    strcat(bodyContent, password);
+    strcat(bodyContent, R"("})");
 
     CURL *curl;
     CURLcode res;
 
-    char* jsonBody = const_cast<char *>(R"({ "name" : "Pedro" , "age" : "22" })");
+    char *jsonBody = const_cast<char *>(R"({ "email" : "eve.holt@reqres.in" , "password" : "cityslicka" })");
 
     struct curl_slist *headers = NULL;
-    headers = curl_slist_append(headers, "Accept: application/json");
     headers = curl_slist_append(headers, "Content-Type: application/json");
-    headers = curl_slist_append(headers, "charsets: utf-8");
 
     curl_global_init(CURL_GLOBAL_ALL);
 
     curl = curl_easy_init();
 
     if (curl) {
-        curl_easy_setopt(curl, CURLOPT_URL, "https://randomuser.me/api");
+        curl_easy_setopt(curl, CURLOPT_URL, "https://reqres.in/api/login");
         curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, false);
-//        curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
-//        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, jsonBody);
+        curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
+        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, bodyContent);
         curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
         curl_easy_setopt(curl, CURLOPT_WRITEDATA, &readBuffer);
 
@@ -64,5 +73,9 @@ std::string loginApi() {
     std::cout << readBuffer << std::endl;
     std::cout << responseCode << std::endl;
 
-    return responseCode + "\n" + readBuffer;
+    return "Response Code: "
+           + std::to_string(responseCode)
+           + "\n"
+           + "Response Body: "
+           + readBuffer;
 }
